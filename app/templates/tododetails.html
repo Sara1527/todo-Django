@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for i in todo %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo-Detail View</title>
+</head>
+
+<div class="container">
+    <table class="table table-bordered" align="center">
+        <thead>
+            <tr>
+                <th>S.NO.</th>
+                <th>Title</th>
+                <th>Creation Date</th>
+                <th>Status</th>
+                <th>DESC.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.status}}</td>
+                <td>{{i.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endfor %}
+{% endblock %}
